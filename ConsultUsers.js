@@ -18,11 +18,14 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         const tableBody = document.querySelector('#userTable tbody');
         users.forEach(user => {
+            const birthDate = new Date(user.birth_date);
+            const formattedDate = `${birthDate.getDate().toString().padStart(2, '0')}/${(birthDate.getMonth() + 1).toString().padStart(2, '0')}/${birthDate.getFullYear()}`;
+
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${user.first_name}</td>
                 <td>${user.last_name}</td>
-                <td>${user.birth_date}</td>
+                <td>${formattedDate}</td>
             `;
             tableBody.appendChild(row);
         });
