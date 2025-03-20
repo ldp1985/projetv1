@@ -24,6 +24,11 @@ h1 {
     color: #333;
 }
 
+.table-container {
+    max-height: 400px; /* Ajustez cette valeur selon vos besoins */
+    overflow-y: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -38,4 +43,7 @@ th, td {
 
 th {
     background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
