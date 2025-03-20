@@ -3,25 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enregistrer Utilisateur</title>
+    <title>Plateforme de Saisie</title>
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Enregistrer Utilisateur</h1>
-        <form id="userForm">
-            <label for="firstName">Prénom :</label>
-            <input type="text" id="firstName" name="firstName" required>
+    <div class="main-container">
+        <!-- Formulaire d'enregistrement utilisateur -->
+        <div class="container">
+            <h1>Enregistrer Utilisateur</h1>
+            <form id="userForm">
+                <label for="firstName">Prénom :</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Nom :</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="birthDate">Date de naissance :</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+                
+                <button type="submit">Enregistrer</button>
+            </form>
+            <div id="userMessage" class="message"></div>
+        </div>
 
-            <label for="lastName">Nom :</label>
-            <input type="text" id="lastName" name="lastName" required>
-
-            <label for="birthDate">Date de naissance :</label>
-            <input type="date" id="birthDate" name="birthDate" required>
-
-            <button type="submit">Enregistrer</button>
-        </form>
-        <div id="message"></div>
+        <!-- Nouveau formulaire pour le cadastre -->
+        <div class="container">
+            <h1>Saisie Cadastre</h1>
+            <form id="cadastreForm">
+                <label for="libelle">Libellé :</label>
+                <input type="text" id="libelle" name="libelle" required>
+                
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+                
+                <label for="refCadastre">Référence cadastrale :</label>
+                <input type="text" id="refCadastre" name="refCadastre" required>
+                
+                <label for="codeCommune">Code commune :</label>
+                <input type="text" id="codeCommune" name="codeCommune" required>
+                
+                <label for="superficie">Superficie :</label>
+                <input type="text" id="superficie" name="superficie" required>
+                
+                <label for="typeDeBien">Type de bien :</label>
+                <input type="text" id="typeDeBien" name="typeDeBien" required>
+                
+                <label for="lienHypertexte">Lien hypertexte :</label>
+                <input type="url" id="lienHypertexte" name="lienHypertexte">
+                
+                <label for="coordonnees">Coordonnées :</label>
+                <input type="text" id="coordonnees" name="coordonnees" required>
+                
+                <button type="submit">Enregistrer</button>
+            </form>
+            <div id="cadastreMessage" class="message"></div>
+        </div>
     </div>
     <script src="form.js"></script>
 </body>
