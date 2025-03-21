@@ -48,15 +48,84 @@ th {
     z-index: 1;
 }
 
-.delete-button {
+tr:nth-child(even) {
+    background-color: #e0f7fa; /* Bleu ciel */
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions button.edit {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.actions button.edit:hover {
+    background-color: #0056b3;
+}
+
+.actions button.delete {
     background-color: #ff4d4d;
     color: white;
+}
+
+.actions button.delete:hover {
+    background-color: #ff1a1a;
+}
+
+.actions button.save {
+    background-color: #4caf50;
+    color: white;
+}
+
+.actions button.save:hover {
+    background-color: #45a049;
+}
+
+.add-row {
+    text-align: center;
+}
+
+.add-row button {
+    background-color: #4caf50;
+    color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px;
+    border-radius: 4px;
     cursor: pointer;
+}
+
+.add-row button:hover {
+    background-color: #45a049;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
     border-radius: 4px;
 }
 
-.delete-button:hover {
-    background-color: #ff1a1a;
+.message.success {
+    color: green;
+    background-color: #e8f5e9;
+}
+
+.message.error {
+    color: red;
+    background-color: #ffebee;
+}
+
+.loading {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
 }
