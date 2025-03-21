@@ -44,13 +44,25 @@ document.getElementById('userForm').addEventListener('submit', async function(ev
 // Nouveau gestionnaire pour le formulaire cadastre
 document.getElementById('cadastreForm').addEventListener('submit', async function(event) {
     event.preventDefault();
+        
+    // Vérifier et convertir la superficie en nombre
+    const superficieInput = document.getElementById('superficie').value;
+    const superficie = parseFloat(superficieInput);
+    
+    // Validation de la superficie
+    if (isNaN(superficie)) {
+        const messageElement = document.getElementById('cadastreMessage');
+        messageElement.textContent = 'La superficie doit être un nombre valide';
+        messageElement.className = 'message error';
+        return;
+    }
     
     const cadastreData = {
         libelle: document.getElementById('libelle').value,
         adresse: document.getElementById('adresse').value,
         ref_cadastre: document.getElementById('refCadastre').value,
         code_commune: document.getElementById('codeCommune').value,
-        superficie: document.getElementById('superficie').value,
+        superficie: superficie, // Envoyé comme nombre, pas comme chaîne
         type_de_bien: document.getElementById('typeDeBien').value,
         lien_hypertexte: document.getElementById('lienHypertexte').value,
         coordonnees: document.getElementById('coordonnees').value
