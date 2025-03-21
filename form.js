@@ -69,7 +69,7 @@ document.getElementById('cadastreForm').addEventListener('submit', async functio
     };
     
     try {
-        const response = await fetch('https://axohxoqosxcrkqidbphf.supabase.co/rest/v1/rpc/add_cadastre', {
+        const response = await fetch('https://axohxoqosxcrkqidbphf.supabase.co/rest/v1/rpc/add_cadastre_new', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
