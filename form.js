@@ -12,7 +12,7 @@ document.getElementById('userForm').addEventListener('submit', async function(ev
     };
     
     try {
-        const response = await fetch('https://axohxoqosxcrkqidbphf.supabase.co/rest/v1/rpc/add_user', {
+        const response = await fetch('https://axohxoqosxcrkqidbphf.supabase.co/rest/v1/rpc/add_cadastre_new'', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
